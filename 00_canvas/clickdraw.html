@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    #slate {border:1px solid black}
+  </style>
+  <h1> bonjoure mondel ! </h1>
+  <h2> demo  </h2>
+  <div>
+    <canvas height = "600" width = "600" id = "slate">
+      hello world
+    </canvas>
+  </div>
+  <button id = "clear" value = "clear"/>
+  <br/>
+  <button id = "toggle"  value = "switch to dot draw"/>
+  <script>
+    var mode = "r";
+    var c = document.getElementById("slate");
+    var w = c.getAttribute("width");
+    var h = c.getAttribute("height");
+    car ctx = c.getContext("2d");
+    var cbtn = document.getElementById("clear");
+    cbtn.addEventListener('click',function(){
+    ctx.clearRect(0,0,w,h);
+    });
+    function getMousePos(canvas, evt) {
+    var rect = canvas.getBoundingClientRect();
+    return {
+    x: evt.clientX - rect.left,
+    y: evt.clientY - rect.top
+    };
+    }
+    c.addEventListener('click', function() {
+    if (mode == "r"){
+    var cds = getMousePos(canvas,evt);
+    }
+    });
+      </script>
+</html>
