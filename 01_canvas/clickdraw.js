@@ -1,6 +1,6 @@
-// Jason Tung 
+// azrael --- Jason Tung and Mohammed Uddin
 // SoftDev2 pd7 
-// K0  I see a Red Door 
+// K #01: ...and I want to Paint It Better
 // 2019-01-31 
 
 //state var for true rectangle or false dot
