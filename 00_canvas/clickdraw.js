@@ -30,7 +30,7 @@ tbtn.addEventListener('click', function () {
 
 //adds event listener to canvas to draw on it when theres a click
 c.addEventListener('click', function (e) {
-    //OFFSETX/OFFSETY --- gets mousex and mousey relative to the canvas rather than the webpage
+    //OFFSETX/OFFSETY --- gets mousex and mousey relative to the event e rather than the webpage
     var cds = {"x":e.offsetX, "y":e.offsetY};
     if (rect) {
 	//draw a 100 width 200 height rect at the mousex mousey
@@ -46,3 +46,4 @@ c.addEventListener('click', function (e) {
         console.log("bazinga");
     }
 });
+//PREVENTDEFAULT() --- interrupts the default action of an element. ex: adding a prevent default on a click actionlistener for a hyperlink will prevent the browser from navigating to the url
