@@ -1,5 +1,5 @@
 // azrael --- Jason Tung and Simon Tsui
-// SoftDev2 pd7 
+// SoftDev2 pd7
 //K #03: They lock us in the tower whenever we get caught
 // 2019-02-04
 
@@ -12,10 +12,17 @@ var dvd = document.getElementById("dvd");
 
 //initializing requisite variables
 var requestID;
-var radius = 0;
-var growing = 1;
-var randStart = Math.random();
-var dvdVeloc = [randStart, Math.sqrt(1 - randStart * randStart)];
+var currentlyDoing = "none";
+
+//circle properties
+var radius;
+var growing;
+
+//dvd properties
+var randXStart;
+var randYStart;
+var dvdVeloc;
+var dvdXY;
 
 //set the fill colors now
 ctx.fillStyle = "red";
@@ -46,24 +53,72 @@ var drawDot = function () {
     requestID = window.requestAnimationFrame(drawDot);
 };
 
-var moveDvd = function(){
-    
+var runDot = function () {
+    if (currentlyDoing !== "circle") {
+        radius = 0;
+        growing = 1;
+        currentlyDoing = "circle";
+    }
+    drawDot();
 };
 
-var startDvd = function(){
+var bounce = function () {
+    for (var i = 0; i < 2; i++) {
+        var buffer = i === 0 ? 40 : 25;
+        if (Math.abs(250 - (dvdXY[i] + 50)) >= c.width / 2 - buffer) {
+            dvdVeloc[i] *= -1;
+        }
+    }
+};
+
+var drawDvd = function () {
     window.cancelAnimationFrame(requestID);
+    clear();
     var logo = new Image();
     logo.src = "logo_dvd.jpg";
-    ctx.drawImage(logo, Math.random() * c.width, Math.random() * c.height, 100, 100);
+    ctx.drawImage(logo, dvdXY[0], dvdXY[1], 100, 100);
+    //drawCircle(dvdXY[0], dvdXY[1], 10);
+    dvdXY[0] += dvdVeloc[0];
+    dvdXY[1] += dvdVeloc[1];
+    bounce();
+    requestID = window.requestAnimationFrame(drawDvd);
+};
+
+//diagnostic to make sure it's all good
+var coltbl = {"q1": 0, "q2": 0, "q3": 0, "q4": 0};
+var magnitudetbl = {"x": 0, "y": 0};
+
+var runDvd = function () {
+    if (currentlyDoing !== "dvd") {
+        var theta = Math.random() * Math.PI * 2;
+        var randXStart = 4 * Math.sin(theta);
+        var randYStart = 4 * Math.cos(theta);
+        dvdVeloc = [Math.random() < .5 ? randXStart : -randXStart, Math.random() < .5 ? randYStart : -randYStart];
+        console.log(dvdVeloc);
+        console.log("this is y");
+        console.log(randYStart);
+        dvdVeloc = [Math.random() < .5 ? randXStart : -1 * randXStart, Math.random() < .5 ? randYStart : -1 * randYStart];
+        console.log(dvdVeloc);
+        if (Math.abs(dvdVeloc[0]) > Math.abs(dvdVeloc[1])) {
+            magnitudetbl.x++;
+        }
+        else {
+            magnitudetbl.y++;
+        }
+        console.log("magnitudes:");
+        console.log(magnitudetbl);
+        dvdXY = [Math.random() * (c.width - 80), Math.random() * (c.height - 80)];
+        currentlyDoing = "dvd";
+    }
+
+    drawDvd();
 };
 
 var stopIt = function () {
-    console.log("cancled");
-    console.log(requestID);
     window.cancelAnimationFrame(requestID);
 };
 
-circle.addEventListener("click", drawDot);
+circle.addEventListener("click", runDot);
 stop.addEventListener("click", stopIt);
-dvd.addEventListener("click", startDvd);
+dvd.addEventListener("click", runDvd);
 
