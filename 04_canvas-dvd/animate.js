@@ -64,8 +64,8 @@ var runDot = function () {
 
 var bounce = function () {
     for (var i = 0; i < 2; i++) {
-        var buffer = i === 0 ? 40 : 25;
-        if (Math.abs(250 - (dvdXY[i] + 50)) >= c.width / 2 - buffer) {
+        var buffer = i === 0 ? 50 : 25;
+        if (Math.abs(250 - (dvdXY[i] + buffer)) >= c.width / 2 - buffer) {
             dvdVeloc[i] *= -1;
         }
     }
@@ -76,7 +76,7 @@ var drawDvd = function () {
     clear();
     var logo = new Image();
     logo.src = "logo_dvd.jpg";
-    ctx.drawImage(logo, dvdXY[0], dvdXY[1], 100, 100);
+    ctx.drawImage(logo, dvdXY[0], dvdXY[1], 100, 50);
     //drawCircle(dvdXY[0], dvdXY[1], 10);
     dvdXY[0] += dvdVeloc[0];
     dvdXY[1] += dvdVeloc[1];
