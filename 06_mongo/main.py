@@ -8,7 +8,7 @@
 
 import pymongo
 
-server_addr = "jayy.mooo.com"
+server_addr = "142.93.10.170"
 connection = pymongo.MongoClient(server_addr)
 db = connection.test
 connection = db.restaurants
