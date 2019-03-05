@@ -11,8 +11,7 @@
 # CONTAINS INFORMATION FOR EACH POKEMON IN POKEMON GO
 # NOTE: WE ONLY PARSED INFORMATION PERTAINING TO REAL POKEMON GAMES!!!
 # LINK: https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json
-# IMPORT MECHANISM: parsed pokedex.json from db.pokedex_unparsed in json_setup.pymongo
-# imported pokedex_parsed.json as db.azrael.
+# IMPORT MECHANISM: other py file parses pokedex into a db compatible json and writes it to the server
 
 
 import pymongo

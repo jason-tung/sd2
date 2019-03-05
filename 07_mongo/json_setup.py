@@ -19,3 +19,11 @@ with open("pokedex_parsed.json", "w") as f:
     for pkmon in pkmon_list:
         f.write(json.dumps(pkmon))
         f.write("\n")
+
+collection = db.azrael
+        
+f=open("pokedex_parsed.json","r")
+data=json.loads(f.read())
+f.close()
+
+collection.insert_many(data)
