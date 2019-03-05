@@ -42,13 +42,31 @@ def find_pokemans(**kwargs):
                 find_query[k] = {'$in': args[k]}
             else:
                 find_query[k] = args[k]
-    print(find_query)
+    print("QUERY:", find_query)
+    print("-+-+-")
     for k in connection.find(find_query):
-        print(k)
+        print("name: ", k['name'])
+        for ele in args:
+            if args[ele] is not None:
+                if ele == "evolutions":
+                    ret_str = "evolutions: "
+                    prefixes = ["next", "prev"]
+                    for pref in prefixes:
+                        try:
+                            ret_str += [x["name"] for x in k[pref + "_evolution"]] + ", "
+                        except:
+                            pass
+                elif ele != "name":
+                    print(ele + ": ", k[ele])
+        print("-+-+-")
 
 
+# print("EVOLUTION: CHARIZARD")
+print("~~~~~~~~~~~~~~~~~~")
 find_pokemans(evolutions="Charizard")
-print("-------------")
+# print("HEIGHT: 1.19 m, TYPE: FLYING")
+print("~~~~~~~~~~~~~~~~~~")
 find_pokemans(height='1.19 m', type=['Flying'])
-print("-------------")
+# print("NUM: >050, HEIGHT: >1.00 m, TYPE: WATER OR ICE, WEAKNESS: BUG OR FIRE")
+print("~~~~~~~~~~~~~~~~~~")
 find_pokemans(num={"$gt": "050"}, height={"$gt": "1.00 m"}, type=['Water', 'Ice'], weaknesses=['Bug', 'Fire'])
