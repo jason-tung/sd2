@@ -14,10 +14,13 @@ def setup(db):
     # connection = pymongo.MongoClient(server_addr)
     # db = connection.test
     connection = db.pokedex_unparsed
+    with open('util/pokedex.json') as f:
+        data = json.load(f)
 
     id = 1
-    pkmon_list = connection.find_one({})["pokemon"]
-    with open("pokedex_parsed.json", "w") as f:
+    pkmon_list = data["pokemon"]
+    print(pkmon_list)
+    with open("util/pokedex_parsed.json", "w") as f:
         f.write("[")
         for pkmon in pkmon_list:
             f.write(json.dumps(pkmon))
@@ -28,7 +31,7 @@ def setup(db):
 
     collection = db.azrael
     collection.drop()
-    f=open("pokedex_parsed.json","r")
+    f=open("util/pokedex_parsed.json","r")
     json_data = f.read()
     f.close()
     data = json.loads(json_data)

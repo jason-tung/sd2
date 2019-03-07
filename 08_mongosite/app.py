@@ -40,7 +40,9 @@ def auth():
         parser.setup(db)
         flash("droplet tested and set up")
         return redirect(url_for("search", category="success", flash=True), code=307)
-    except:
+    except Exception as e:
+        print(e)
+        db_pointer = None
         flash("droplet tested and not working")
         #print("DSFJDSKFJLKDFJKLSDJFKLSJDKLFDSKLFJKDSLFJDLKSFJKLDSFJLKSJFLK")
         return render_template("land.html", category="error", flash=True)
