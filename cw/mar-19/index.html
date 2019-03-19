@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--D3 demo: hardcoded bars removed, to be generated fr data-->
+<!--
+    Can yield a horizontal bar chart if properly bound to data
+    (steelblue bars, white number overlays)
+    ...but will yield only blank page at first.
+  -->
+<!--
+Jason Tung
+SoftDev2 pd7
+2019-03-19
+-->
+
+<style>
+  .chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+  }
+</style>
+
+<div class="chart">
+</div>
+
+<button id="setdata">set data</button>
+&nbsp
+<button id="setchart">set chart</button>
+&nbsp
+<button id="setwidth">set the widths for the bars</button>
+&nbsp
+<button id="settext">set the text on each bar</button>
+
+<div id="whatisdata">
+</div>
+
+<script src="http://d3js.org/d3.v5.min.js"
+	charset="utf-8"></script>
+
+<script src="bar.js">
+</script>
+
