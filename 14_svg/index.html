@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        rect {
+            fill: red;
+        }
+    </style>
+</head>
+<body>
+
+
+<button id="clear">clear</button>
+<br>
+<button id="enter">enter</button>
+<br>
+<button id="exit">exit</button>
+<br>
+<button id="update">update</button>
+<br>
+<div id="wtdata">data:[]</div>
+</body>
+<script src="http://d3js.org/d3.v5.min.js"
+        charset="utf-8"></script>
+<script>
+    const d3 = window.d3;
+
+    var pic = d3.select("body").append("svg").attr('width', 500).attr('height', 500).attr("id", "pic");
+
+    var clr = document.getElementById("clear");
+    clr.addEventListener('click', function () {
+        var temp = document.getElementById("pic");
+        while (temp.lastChild) {
+            temp.removeChild(temp.lastChild);
+        }
+        var hello = pic.append("rect")
+            .attr("x", 80).attr("y", 60)
+            .attr("width", 20).attr("height", 20)
+            .style("fill", "green");
+        var hello2 = pic.append("rect")
+            .attr("x", 160).attr("y", 120)
+            .attr("width", 40).attr("height", 40)
+            .style("fill", "green");
+    });
+
+    var wtdata = document.getElementById("wtdata");
+
+    //ENTER -- PLACEHOLDER FOR MISSING DOM ELEMENTS
+    var enter = document.getElementById("enter");
+    enter.addEventListener('click', function () {
+        var data = [4, 8, 20];
+        wtdata.innerHTML = "data: [" + String(data) + "]";
+        var bars = pic.selectAll("rect").data(data).enter().append("rect")
+            .attr("width", 100).attr("height", function (d) {
+                return d
+            })
+            .attr("x", 20).attr("y", function (d) {
+                return 5 * d
+            })
+            .style("fill", "blue");
+
+    });
+
+    //exit --placeholder for missing list elements
+    var exit = document.getElementById("exit");
+    exit.addEventListener('click', function () {
+        var data = [4];
+        wtdata.innerHTML = "data: [" + String(data) + "]";
+        var bars = pic.selectAll("rect").data(data).exit()
+            .style("fill", "red");
+
+    });
+
+    //update -- updates the existing elements in the list and dom
+    var update = document.getElementById("update");
+    update.addEventListener('click', function () {
+        var data = [4, 10];
+        wtdata.innerHTML = "data: [" + String(data) + "]";
+        var bars = pic.selectAll("rect").data(data)
+            .style("fill", "purple");
+    });
+
+</script>
+</html>
