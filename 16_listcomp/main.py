@@ -1,5 +1,12 @@
+# azrael -- Jason Tung
+#
+# SoftDev2 pd7
+#
+# K #16: Do You Even List?
+#
+# 2019-04-12
+
 import functools
-from random import randint
 
 
 # def check_criteria(st):
