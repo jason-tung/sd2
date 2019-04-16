@@ -1,4 +1,4 @@
-print(sorted(list({(x,y,z) for y in range(1,101) for x in range(1,y+1) for z in range(1,x+1) if y**2 == z**2 + x**2})))
+print(sorted(list({(z,x,y) for y in range(1,101) for x in range(1,y+1) for z in range(1,x+1) if y**2 ==  x**2 + z**2})))
 
 
 m = [5,7,2,3,3,999,5,5,5,513]
