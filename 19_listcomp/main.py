@@ -2,7 +2,7 @@
 #
 # SoftDev2 pd7
 #
-# K #19: 
+# K #19: Ready, Set, Math! 
 #
 # 2019-04-16
 
@@ -29,13 +29,8 @@ def symmetric_diff(s1,s2):
 def cartesian_product(s1,s2):
     return {(j,k) for j in s1 for k in s2}
 
-#Poopy
-def poopy(s1,s2):
-    return cartesian_product(s1,symmetric_diff(s2,cartesian_product(s2,intersect(s1,union(s2,s1)))))
-
 print(union(s1,s2))
 print(intersect(s1,s2))
 print(set_diff(s1,s2))
 print(symmetric_diff(s1,s2))
 print(cartesian_product(s1,s2))
-print(poopy(s1,s2))
