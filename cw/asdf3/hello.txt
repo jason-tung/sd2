@@ -1,0 +1,692 @@
+SoftDev2 HW 2019 spring
+A s s i g n m e n t s
+
+Software  Development - Term 2
+
+Mykolyk
+
+Spring 2019
+
+
+When required, observe this heading format (usually for worK assignments):
+
+<Frist> <Lsat>
+
+SoftDev2 pd<p>
+
+K<n> -- <Title/Topic/Summary>
+
+<yyyy>-<mm>-<dd>   
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #19: Ready, Set, Math!
+
+Due W 2019-04-17, 8:00am, EST.
+
+.
+
+To cement your capabilities with list comprehensions, we present you with these tasks.
+
+Your mission: Write a list comprehension to generate each:
+
+
+Union of the sets A and B, denoted A ∪ B, is the set of all objects that are a member of A, or B, or both. 
+E.g., 
+The union of {1, 2, 3} and {2, 3, 4} is the set {1, 2, 3, 4} .
+
+Intersection of the sets A and B, denoted A ∩ B, is the set of all objects that are members of both A and B. 
+E.g., 
+The intersection of {1, 2, 3} and{2, 3, 4} is the set {2, 3} .
+
+
+Set difference of U and A, denoted U \ A, is the set of all members of U that are not members of A. 
+E.g., 
+The set difference {1, 2, 3} \ {2, 3, 4} is {1}, while, conversely, the set difference {2, 3, 4} \ {1, 2, 3} is {4} . 
+When A is a subset of U, the set difference U \ A is also called the complement of A in U. In this case, if the choice of U is clear from the context, the notation Ac is sometimes used instead of U \ A, particularly if U is a universal set as in the study of Venn diagrams.
+
+
+Symmetric difference of sets A and B, denoted A △ B or A ⊖ B, is the set of all objects that are a member of exactly one of A and B (elements which are in one of the sets, but not in both). 
+E.g., 
+For the sets {1, 2, 3} and {2, 3, 4} , the symmetric difference set is {1, 4} . It is the set difference of the union and the intersection, (A ∪ B) \ (A ∩ B) or (A \ B) ∪ (B \ A).
+
+
+Cartesian product of A and B, denoted A × B, is the set whose members are all possible ordered pairs (a, b) where a is a member of A and b is a member of B. 
+E.g., 
+The cartesian product of {1, 2} and {red, white} is {(1, red), (1, white), (2, red), (2, white)}.
+
+above taken from wikipedia
+
+
+Guidelines/Protips:
+
+Math: a set is unordered and has no duplicates.
+Python: A function for each is not a bad idea -- a fxn which basically just returns a list comprehension…
+Looking for more? Implement some other challenging math operation...
+? of A and B, …  where ...
+E.g., 
+...
+
+
+Save to workshop under 19_listcomp.
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #18: Getting Clever with List Comprehensions
+
+Due T 2019-04-16, 3:00pm, EST.
+
+.
+
+1. Write a list comprehension to generate a list of all Pythagorean triples on range [0,n).
+
+2. Implement quicksort in the most succinct way possible using list comprehension(s).
+
+
+Save to workshop under 18_listcomp.
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #17: PPFTLCW
+
+Due M 2019-04-15, 8:00am, EST.
+
+.
+
+Practice writing some list comprehensions in Python using the pair programming handout as a guide.
+
+
+Save to workshop under 17_listcomp.
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #16: Do You Even List?
+
+Due F 2019-04-12, 8:00am, EST.
+
+.
+
+Practice writing some list comprehensions in Python. Once you're comfortable, attack these:
+
+Write a function that uses list comprehension to return whether a password meets a minimum threshold: it contains a mixture of upper- and lowercase letters, and at least one number
+Write a function that uses list comprehension to return a password's strength rating. This function should return a lower integer for a weak password and a higher integer for a stronger password. (Suggested scale: 1-10) Consider these criteria:
+mixture of upper- and lower-case
+inclusion of numerals
+inclusion of these non-alphanumeric chars: . ? ! & # , ; : - _ *
+
+Save to workshop under 16_listcomp.
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+P #04: Viz. Not to be confused with vis or vis-à-vis
+
+Due M 2019-04-08, 8:00pm, EST.
+
+
+Imagine:
+
+You’ve heard “data science is the new black,” and wish to exploit this fad.
+
+Your team has come upon a trove of interesting data.
+
+Your team appreciates the worth of this data, and would like to convey its most interesting aspects…
+
+ which are not apparent at first glance,
+
+  or even through generation of simple statistical measures
+
+    (e.g., measures of central tendency).
+
+You have reason to believe that there is yet more to be revealed about your data set, and you have been recently made aware of a powerful JavaScript data visualization library. Thusly you have agreed upon these guideposts for your next project:
+
+Flask will serve as your web server/delivery framework.
+Multiple Python files may be used as necessary. (middleware/modules/etc)
+Your data will reside in a data directory in your repo and will be delivered to your front-end (JS) via aforementioned machinery.
+Animation shall be D3 driven (not, eg, CSS).
+You will use D3.js in conjunction with SVG and/or HTML5+canvas.
+You will provide your own customized CSS.
+You will write supporting JavaScript as necessary.
+
+You will need a DEVLOG for this project.
+
+The purpose of the devlog is to allow any group member at any time to see the current state of the project.
+PM will make sure devlog is being maintained, but will not make all entries.
+The devlog should be a plain text file, named devlog.txt, in doc root directory (subdir of root of your repo).
+When any team member stops working and pushes changes to github, they should update the devlog explaining what changes have been made. Include errors/bugs discovered (or created).
+Separate devlog entries with a newline.
+Most recent entry at the bottom.
+Each entry should begin with the following format: firstL -- TIMESTAMP\n
+e.g.:
+
+topherM -- 1999-12-31 23:59
+
+
+Your project may be tested with Firefox, Chrome or Safari, and should function as intended in all three.
+
+
+DELIVERABLES:
+
+in <reporoot>/doc/:
+design doc PDF, named design.pdf (case sensitive)
+devlog.txt
+in <reporoot>/data/:
+copy of your raw data
+CSV or JSON, ideally
+plaintext file named "data_sourceX"
+contains solely URL for one dataset
+one file per data set
+X->0,1,2,etc.
+
+Deliverable the First: The Overview
+
+Due R 2019-03-28, 8:00am, EST.
+
+
+1. Edit README.md in your repository to give a rough outline of your project.
+
+Description of data set(s).
+Source (brief description + hyperlink)
+Relevance/significance
+Explanation, in broad strokes if necessary, of how you aim to make this data come alive.
+What will be shown, absent user interaction?
+How will user interact with your visualization?
+What questions will your visualization allow user to explore? What questions will it provoke?
+Explanation of D3 feature utilization:
+enter/exit selections?
+transitions?
+responsiveness/interactivity?
+similarity to gallery (github.com/d3/d3/wiki/Gallery) examples? Which and how?
+Sketch/mock-up/screenshot of your envisioned visualization.
+
+2. Edit devlog.txt appropriately.
+
+
+3. Submodule linking notes:
+
+Project manager owns.
+Link your submodule in stunning-octo-guacamole repository.
+Name your submodule link as follows: Forgot how? Peep the how-to-link-a-submodule-guide
+name_of_team--lastaF-lastbF
+(e.g., sleater-kinney--brownsteinC_tuckerC_weissJ)
+
+Deliverable the Second: Initial Feedback Round
+
+Due F 2018-03-29, 5:00pm, EST.
+
+
+It’s time to pretend:_The startup you founded has grown to now incorporate several dev teams, each working on a different project. A round of project proposals has just been submitted, and your team will review at least three (3) of them (more, if your busy CEO schedule permits) to help ensure they succeed -- by pointing out deadly pitfalls, highlighting good ideas, suggesting improvements, etc.
+
+
+TASK: With your executive team, review the proposal of the team immediately following yours in the submodule listing (https://github.com/stuy-softdev/stunning-octo-guacamole). Address, at minimum, each bullet point below. (Discuss with your team, then open distinct issues as appropriate for each on your target repo. Then, repeat the process for the next 2 teams in the list (wrap around after end).
+
+
+For each of your new issues, use appropriate "rev_X" prefix in its title.
+
+rev_A :: Is it clear how you, a user, would interact with their data? How compelling is it? Does their interaction mechanism encourage you, the user, to continue exploring?
+rev_B :: How clearly do you, a peer developer, understand the aim of their project? Is it clear what they aim to create?
+rev_C :: How appropriate is their chosen display format for their chosen data? Does their data merit multiple display formats? If so, which? (https://github.com/d3/d3/wiki/Gallery)
+rev_D :: What modification(s) could improve the user experience by encouraging deeper exploration and better understanding of the data? Be as specific as possible; your suggestion should be actionable.
+
+Deliverable the Toid: Launch Codes
+
+Due T 2019-04-02, 8:00am, EST.
+
+
+Update your README.md to include launch/install instructions.
+
+Assume your audience has taken StuyAPCS.
+Append new section to end of existing readme, with heading "LAUNCH CODES"
+
+Deliverable the Force: Prelim Demos / Secondary Feedback Round
+
+Due W 2019-04-03, classtime
+
+
+You will give a brief demo of your project in its current state. Therefore, make sure you have *something* that works. At least one member of team will bring notepad+pen to record QCC's from audience.
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #15: Scattered... or: Smothered, Covered, Chunked, Diced, Peppered, Capped, Topped & Country
+
+Due M 2019-03-25, 8:00am, EST.
+
+.
+
+As a dynamic duo, find a manageable data set suitable for scatter plot generation.
+
+Use HTML and JS (D3) to generate a scatterplot of your data.
+
+
+You may hardcode your dataset into your JS file. (Focus on D3 proficiency, not file I/O…)
+Either way, store your raw data in a file in this workshop folder.
+Title. Description. Labels. Devs.
+Cite source for data, including hyperlink.
+Declare/instantiate as little SVG as possible in HTML; dynamically generate in your external JS script.
+
+Save to workshop under 15_svg.
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #14: Learning to Swim
+
+Due R 2019-03-21, 8:00am, EST.
+
+.
+
+1. With your buddy, walk through HSW.
+
+Store your CSS, JS, HTML files in a new workshop folder.
+Test drive each snippet of code as you go.
+5. Note anything notable.
+
+
+Save your copy of index.html to workshop under 14_svg.
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #13: Diving Deeper Into D3
+
+Due W 2019-03-20, 8:00am, EST.
+
+.
+
+1. With your buddy, walk through LMaBC-I. Make sure you can replicate the desired output via index.html+index.js combo.
+
+2. With your buddy, walk through LMaBC-II.
+
+Store your CSS, JS, HTML files in a new workshop folder.
+Test drive each snippet of code as you go.
+5. Note anything notable.
+
+
+Save your copy of index.html to workshop under 13_svg.
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #12: Dabbling in D3
+
+Due T 2019-03-19, 8:00am, EST.
+
+.
+
+1. Download the starter HTML file from your notes&code repo: https://github.com/stuy-softdev/notes-and-code/tree/master/smpl/14_d3
+
+2. Peruse this file. Jot down notable observations, questions, predictions.
+
+3. Render this file in a web browser, alongside the static HTML you hardcoded during class.
+
+4. Open your dev console, and execute, in order, the JS commands you perused two steps ago.
+
+5. Note anything notable.
+
+
+Save your copy of index.html to workshop under 12_svg.
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #11: Ask Circles [Change || Die] …While On The Go
+
+Due M 2019-03-18, 8:00am, EST.
+
+.
+
+Create an HTML/JS program with the following features:
+
+An SVG container
+3 buttons:
+"clear" --- wipes the SVG area clean
+"move"
+upon first click, imparts to all existing balls a constant velocity (fixed across collection)
+subsequent clicks have no effect
+"?" --- enables something cool of your own creation (invisible trigger barriers? timed transitions? velocity mods?...)
+Enable the following event listeners for the svg area:
+(Do NOT put all of this in a single event listener.)
+Clicking on a blank section of the svg area should create a circle at that position.
+Clicking on a circle once should change its color. (No new circles should be added to the svg container.)
+Clicking on a circle a second time should remove the circle and add a new one to the svg container at a random location.
+
+Save to workshop under 11_svg.
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #10: Ask Circles [Change || Die]
+
+Due R 2019-03-14, 8:00am, EST.
+
+.
+
+Create an HTML/JS program with the following features:
+
+An SVG container
+1 button: clear
+Enable the following event listeners for the svg area:
+(Do NOT put all of this in a single event listener.)
+Clicking on a blank section of the svg area should create a circle at that position.
+Clicking on a circle once should change its color. (No new circles should be added to the svg container.)
+Clicking on a circle a second time should remove the circle and add a new one to the svg container at a random location.
+
+Save to workshop under 10_svg.
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #09: Connect the Dots. . .
+
+Due W 2019-03-13, 8:00am, EST.
+
+.
+
+Recreate your connect-the-dots HTML5/JS program using SVG instead of the canvas.
+
+
+Each time the user clicks inside the SVG area, a circle should be drawn.
+After the first circle, every subsequent click should also result in a line from from the previous circle to the next.
+Include a clear button.
+Note: clearRect() will not work; it is a canvas method. You need to remove all the circles somehow…
+
+Save to workshop under 09_svg.
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #08: Ay Mon, Go Git It From Yer Flask
+
+Due F 2019-03-08, 8:00am, EST.
+
+.
+
+Whip up a Flask app to give a front-end to your db querying machinery.
+
+Keep it simple.
+When your flask app launches, it should drop your db on your default mongo server and rebuild it.
+Provide a form input whereby a user may enter an IP address. Upon submission, your existing db should be dropped, and rebuilt on the mongo server at specified IP. (Assuming said host is running a mongo server.)
+Provide at least one form element to and adequate explanation to facilitate querying.
+Tailor to suit your data.
+
+Save to workshop under 08_mongosite.
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #07: Import/Export Bank
+
+Due W 2019-03-06, 8:00am, EST.
+
+.
+
+1. With your *new* buddy, assess last work. Refactor/robustify/tune as necessary.
+
+2. Find a dataset of interest (https://github.com/jdorfman/awesome-json-datasets) and save its .json file in your work repo.
+
+3. Write a new Python script to...
+
+Create a new Mongo database on a server to which you have access. Use your team name as its name.
+Import your JSON dataset into your new database.
+Reproduce query functionality from last work, adapted analogously to fit your data.
+4. Include a block comment at the top of your script explaining your dataset. Include
+
+name of dataset and description of its contents
+hyperlink to where raw data is hosted
+brief summary of your import mechanism
+
+PROTIP: Test each query in a mongo shell before baking into your python code.
+
+
+Save to workshop under 07_mongo.
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #06: Yummy Mongo Py
+
+Due F 2019-03-01, 8:00am, EST.
+
+.
+
+As a duo, devise then implement a python function with appropriate parameters for each bullet point below. Each function will use pymongo library methods to connect to a MongoDB server and execute the appropriate query.
+
+
+All restaurants in a specified borough.
+All restaurants in a specified zip code.
+All restaurants in a specified zip code and with a specified grade.
+All restaurants in a specified zip code with a score below a specified threshold.
+Something more clever.
+
+PROTIP: Test each query in a mongo shell before baking into your python code.
+
+
+Save to workshop under 06_mongo.
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #05: Head In The Clouds
+
+Due W 2019-02-13, 8:00am, EST.
+
+.
+
+1. Verify that you have a working Digital Ocean droplet, running ubuntu 18.04.
+
+2. Configure a non-root user account with sudo privileges.
+
+3. Verify that you can SSH as this user to your droplet.
+
+4. Install apache2.
+
+5. Once you have verified your apache server is running, register your host's IP address here: goo.gl/vvnw7M
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #04: What is it saving the screen from?
+
+Due R 2019-02-07, 8:00am, EST.
+
+.
+
+Augment last work to offer two different types of animations (one or the other; only one at a time).
+
+Your second animation will mimic the classic DVD player screensaver (https://www.youtube.com/watch?v=iI-RY8ducRc)
+Start a new version of either animation by clicking the appropriate button.
+DVD Animation begins when your “I’m waiting for the movie to start” button is clicked.
+All animation stops when your “STOP” button is clicked.
+Insert your team name and roster as H2/H3 elements, respectively, beneath the buttons.
+
+Save to workshop under 04_canvas-dvd.
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #03: They lock us in the tower whenever we get caught ...which is often
+
+Due W 2019-02-06, 8:00am, EST.
+
+.
+
+Create an HTML5+JS program that can display the following looped animation:
+
+A circle growing and shrinking (cycles between modes)
+Animation begins when your “I’m an Animaniac!” button is clicked
+Animation stops when your “STOP” button is clicked
+
+Save to workshop under 03_canvas-anim.
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #02: Connecting the Dots
+
+Due M 2019-02-04, 8:00am, EST.
+
+.
+
+With your partner from last work, and enlightenment gained through workshop perusal…
+
+Create a webpage using HTML5 and JavaScript:
+
+index.html:
+single canvas (id "playground")
+single button with text "clear" (id "clear")
+dotconn.js:
+Facilitates drawing a series of connected dots on canvas...
+when a user clicks within the border of the canvas,
+a new dot appears, centered at click location
+new dot is connected by a line to last drawn dot
+Facilitates clearing of the canvas when user clicks clear button.
+
+Save to workshop under 02_canvas.
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #01: ...and I want to Paint It Better
+
+Due F 2019-02-01, 8:00am, EST.
+
+.
+
+With your new partner, and enlightenment gained through workshop perusal…
+
+Create a webpage using HTML5 and JavaScript:
+
+clickdraw.html:
+Must contain a canvas -- though it may skew minimalist or baroque.
+Must have a clear button that wipes the canvas clean.
+Must have a toggle button that switches between draw-a-rectangle mode and draw-a-dot mode.
+clickdraw.js:
+Facilitates drawing of a box or dot on the canvas...
+when a user clicks within the border of the canvas (but not outside).
+at mouse location
+upper left corner of rectangle
+center of circle
+Facilitates clearing of the canvas when user clicks clear button.
+Employs state var for box | dot
+Contains comments clearly & succinctly explaining
+e.preventDefault();
+ctx.beginPath();
+e.offsetX
+e.offsetY
+
+Save to workshop under 01_canvas.
+
+========================================================================================
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+K #00: I See a Red Door...
+
+Due R 2019-01-31, 8:00am, EST.
+
+.
+
+Create a webpage using HTML5 and JavaScript:
+
+clickdraw.html:
+Must contain a canvas -- though it may skew minimalist or baroque.
+Must have a clear button that wipes the canvas clean.
+Must have a toggle button that switches between draw-a-rectangle mode and draw-a-dot mode.
+clickdraw.js:
+Facilitates drawing of a box or dot on the canvas...
+when a user clicks within the border of the canvas (but not outside).
+at mouse location
+Facilitates clearing of the canvas when user clicks clear button.
+Employs state var for box | dot
+
+Save to workshop under 00_canvas.
+
+========================================================================================
+
+
+Published by Google Drive–Report Abuse–Updated automatically every 5 minutes
