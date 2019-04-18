@@ -6,20 +6,45 @@
 #
 # 2019-04-20
 
-word_dict = {}
+import functools
+import sys
+
 c = 1
 with open("hello.txt") as fp:
     txt = fp.read()
-    #print(type(txt))
-    txt_stripped = ''.join([i for i in txt if i.isalnum() or i in " \n"])
-    
+    # print(type(txt))
+    txt_stripped = ''.join([i for i in txt if i.isalnum() or i in " \n"]).lower()
+    testy = functools.reduce(lambda d, c: d.update([(c, d.get(c, 0) + 1)]) or d, txt_stripped.split(), {})
+
+
 def find(stri):
-    testy= reduce( lambda d, c: d.update([(c, d.get(c,0)+1)]) or d, txt_stripped.strip(), {})
-    return testy[stri]
+    return testy.get(stri,0)
+
 
 def find_group(group):
-    with open("hello.txt") as fp:
-        txt = fp.read()
-        #print(type(txt))
-        return txt_stripped.count(group)
-        
+    return txt_stripped.count(group)
+
+
+def find_max():
+    return max(testy, key=testy.get)
+
+
+def show_all():
+    return testy
+
+
+print("type find ____, show max, or show all")
+for line in sys.stdin:
+    x = line.split()
+    if x[0] == "find":
+        if len(x) == 2:
+            print(find(x[1]))
+        else:
+            print(find_group(' '.join(x[1:])))
+        #print(x)
+    elif line == "show max\n":
+        print(find_max())
+    elif line == "show all\n":
+        print(show_all())
+    else:
+        print("try find ____, show max, or show all")
