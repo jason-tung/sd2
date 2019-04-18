@@ -33,7 +33,7 @@ def show_all():
     return testy
 
 
-print("type find ____, show max, or show all")
+print("type find ____, show max, show all, or break")
 for line in sys.stdin:
     x = line.split()
     if x[0] == "find":
@@ -46,5 +46,7 @@ for line in sys.stdin:
         print(find_max())
     elif line == "show all\n":
         print(show_all())
+    elif line == "break\n":
+        exit()
     else:
-        print("try find ____, show max, or show all")
+        print("try find ____, show max, show all, or break")
