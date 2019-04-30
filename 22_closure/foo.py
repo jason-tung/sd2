@@ -31,19 +31,31 @@ def make_counter():
 
     return thing
 
+
+class Counter(object):
+    def __init__(self):
+        self._value = 0
+    def increment(self):
+        self._value += 1
+        return self._value
+
+
+
 ctr1 = make_counter()
-
-ctr1()
-
-ctr1()
-
 ctr2 = make_counter()
-
-ctr2()
-
 ctr1()
-
+ctr1()
 ctr2()
+ctr1()
+ctr2()
+print("----")
+ctr1 = Counter()
+ctr2 = Counter()
+print(ctr1.increment())
+print(ctr1.increment())
+print(ctr2.increment())
+print(ctr1.increment())
+print(ctr2.increment())
 
 # def inc(x):
 #     return x + 1
