@@ -1,4 +1,4 @@
-# mikey_g -- Jason Tung & Imad Belkebir
+# mikey_g -- Jason Tung & Ahnag Kazi
 #
 # SoftDev2 pd7
 #
