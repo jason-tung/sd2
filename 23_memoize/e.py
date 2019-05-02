@@ -1,4 +1,3 @@
-#
 # def memoize(f):
 #     hello = {}
 #     def inner(x):
@@ -14,8 +13,6 @@
 #
 # fib = memoize(fib)
 # print(fib(52))
-
-
 
 def memoize(f):
     hello = {}
